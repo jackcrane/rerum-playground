@@ -14,6 +14,23 @@ export const MainContent = () => {
 
   if (loading) return <Section>Loading...</Section>;
 
+  if (!rerumId || rerumId === "/")
+    return (
+      <Section>
+        <p>
+          You have not provided a rerum ID. Enter the ID (not URI) of the rerum
+          object you want to view in the URL bar.
+        </p>
+        <br />
+        <p>
+          Example:{" "}
+          <a href="https://rerum-playground.jackcrane.rocks/68a544f51f6e00240eb36b31">
+            https://rerum-playground.jackcrane.rocks/68a544f51f6e00240eb36b31
+          </a>
+        </p>
+      </Section>
+    );
+
   if (!data)
     return (
       <Section>
@@ -23,6 +40,7 @@ export const MainContent = () => {
 
   return (
     <Section>
+      <h3 style={{ marginBottom: "1rem" }}>Object Data</h3>
       <JsonTable data={clone} />
     </Section>
   );

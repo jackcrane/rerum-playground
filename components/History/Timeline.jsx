@@ -25,14 +25,9 @@ export const Timeline = () => {
   const { path: rerumId } = usePath();
   const { data, loading } = useRerumObject(rerumId);
 
-  if (loading) return <div>Loading...</div>;
+  if (loading) return null;
 
-  if (!data)
-    return (
-      <div>
-        <p>There is no data affiliated with this rerum ID.</p>
-      </div>
-    );
+  if (!data) return null;
 
   return (
     <div className={styles.timeline}>

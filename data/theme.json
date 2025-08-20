@@ -1,0 +1,14 @@
+{
+  "primary": "#007bff",
+  "body": "#fff",
+  "surface": "#f8f9fa",
+  "border": "#dee2e6",
+  "heading": "#212529",
+  "text": "#212529",
+  "skeleton": "#dee2e6",
+  "fonts": {
+    "heading": "IBM Plex Serif",
+    "body": "IBM Plex Serif",
+    "mono": "IBM Plex Mono"
+  }
+}

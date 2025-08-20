@@ -1,0 +1,54 @@
+.metadata {
+  padding: 1rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.red {
+  color: var(--color-danger);
+}
+
+.sectionTitle {
+  margin-bottom: 0.5rem;
+}
+
+.mono {
+  font-family: var(--font-mono);
+}
+
+.id {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  border-bottom: 2px dotted var(--color-primary);
+  text-decoration: none;
+}
+
+.alert {
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+}
+
+.alert.danger {
+  background-color: color-mix(
+    in oklab,
+    var(--color-danger) 10%,
+    var(--color-body)
+  );
+  border: 1px solid var(--color-danger);
+}
+
+.alert.danger strong {
+  color: var(--color-danger);
+}
+
+.alert.success {
+  background-color: color-mix(
+    in oklab,
+    var(--color-success) 10%,
+    var(--color-body)
+  );
+  border: 1px solid var(--color-success);
+}
+
+.alert.success strong {
+  color: var(--color-success);
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>React Vite Micro App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --color-primary: #007bff;
+        --color-inverse: #fff;
+        --color-body: #fff;
+        --color-surface: #f8f9fa;
+        --color-surface-light: hsl(210, 17%, 99%);
+        --color-border: #dee2e6;
+        --color-heading: #3b4044;
+        --color-text: #212529;
+        --color-skeleton: #dee2e6;
+        --color-danger: #dc3545;
+        --color-success: #198754;
+
+        --font-heading: "IBM Plex Serif", serif;
+        --font-body: "IBM Plex Serif", serif;
+        --font-mono: "IBM Plex Mono", monospace;
+      }
+
+      body,
+      html {
+        font-family: var(--font-body);
+        color: var(--color-text);
+        padding: 0;
+        margin: 0;
+        background-color: var(--color-body);
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: var(--font-heading);
+        color: var(--color-heading);
+        margin: 0;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      a {
+        color: var(--color-primary);
+        padding: 0px 2px;
+        transition: all 0.2s ease-in-out;
+      }
+
+      a:hover {
+        color: var(--color-inverse);
+        background-color: var(--color-primary);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="./src/index.jsx"></script>
+  </body>
+</html>
+<!-- DEMO ID: 68a4dfbd1f6e00240eb36b2c -->

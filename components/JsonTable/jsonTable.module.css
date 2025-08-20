@@ -1,0 +1,165 @@
+/* JsonTable.module.css */
+:root {
+  --json-table-radius: 0px;
+  --json-table-spacing: 8px;
+  --json-table-font-size: 0.95rem;
+  --json-table-line-height: 1.45;
+  --json-table-border: 1px solid var(--color-border);
+  --json-table-vertical-key-width: 36px; /* strip width */
+  --cell-padding: 6px 8px;
+}
+
+.wrapper {
+  background: var(--color-surface);
+  border-radius: var(--json-table-radius);
+  overflow: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-family: var(--font-body);
+  font-size: var(--json-table-font-size);
+  line-height: var(--json-table-line-height);
+  color: var(--color-text);
+  background: var(--color-body);
+  border: var(--json-table-border);
+  border-radius: var(--json-table-radius);
+  overflow: hidden;
+}
+
+.thKey,
+.thValue,
+.thIndex {
+  text-align: left;
+  font-family: var(--font-heading);
+  color: var(--color-heading);
+  background: var(--color-surface);
+  border-bottom: var(--json-table-border);
+  padding: var(--cell-padding);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.thKey {
+  width: 220px;
+}
+.thIndex {
+  width: 72px;
+}
+
+.tr:nth-child(even) .tdKey,
+.tr:nth-child(even) .tdValue,
+.tr:nth-child(even) .tdIndex {
+  background: color-mix(in oklab, var(--color-surface) 50%, var(--color-body));
+}
+
+.tdKey,
+.tdValue,
+.tdIndex {
+  padding: var(--cell-padding);
+  vertical-align: top;
+  border-bottom: var(--json-table-border);
+}
+
+tr:last-child > .tdKey,
+tr:last-child > .tdValue,
+tr:last-child > .tdIndex {
+  border-bottom: none;
+}
+
+.tdIndex {
+  font-family: var(--font-mono);
+  opacity: 0.8;
+}
+
+.toggle {
+  font: inherit;
+  background: transparent;
+  border: var(--json-table-border);
+  padding: 3px 5px;
+  border-radius: 6px;
+  cursor: pointer;
+  line-height: 1;
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  user-select: none;
+  color: var(--color-text);
+}
+.toggle:hover {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px
+    color-mix(in oklab, var(--color-primary) 30%, transparent);
+}
+.toggle[aria-expanded="true"] {
+  background: color-mix(in oklab, var(--color-primary) 12%, var(--color-body));
+}
+
+/* NEW: expanded row uses one cell spanning all columns, with an inner grid */
+.expandedRow {
+}
+.expandedCell {
+  padding: 0;
+  background: var(--color-body);
+}
+
+.expandedGrid {
+  display: grid;
+  grid-template-columns: var(--json-table-vertical-key-width) 1fr;
+  width: 100%;
+  min-width: 100%; /* ensure it fills table width */
+  border-bottom: var(--json-table-border);
+}
+
+.verticalKeyCell {
+  background: var(--color-surface);
+  border-right: var(--json-table-border);
+}
+
+.verticalKey {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+  display: inline-block;
+  padding: 12px 6px;
+  font-family: var(--font-heading);
+  color: var(--color-heading);
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.expandedPanel {
+  overflow: auto;
+  padding: 8px;
+  /* Optional: let nested tables breathe horizontally without forcing table to grow columns */
+  container-type: inline-size;
+  opacity: 0.8;
+}
+
+.objectBlock,
+.arrayBlock {
+  background: color-mix(in oklab, var(--color-surface) 8%, var(--color-body));
+  border-radius: calc(var(--json-table-radius) - 2px);
+}
+
+.primitiveRow {
+  font-family: var(--font-mono);
+  padding: 6px 4px;
+}
+
+/* Primitive value styles */
+.string {
+  color: color-mix(in oklab, var(--color-primary) 60%, var(--color-text));
+}
+.number {
+  color: color-mix(in oklab, var(--color-heading) 80%, var(--color-text));
+}
+.boolean {
+  color: color-mix(in oklab, var(--color-heading) 65%, var(--color-text));
+}
+.null {
+  color: color-mix(in oklab, var(--color-danger) 70%, var(--color-text));
+}

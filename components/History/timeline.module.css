@@ -1,0 +1,27 @@
+.timeline {
+  border-right: 1px solid var(--color-border);
+  height: calc(100vh - 4rem - 4px);
+  min-width: 200px;
+  overflow: auto;
+}
+
+.historySection {
+  position: sticky;
+  top: 0rem;
+  padding: 2px 8px;
+  background-color: var(--color-surface);
+  font-weight: bold;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.historyItem {
+  border-bottom: 1px solid var(--color-border);
+  padding: 2px 8px;
+}
+
+.mono {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  text-decoration: none;
+  border-bottom: 2px dotted var(--color-primary);
+}

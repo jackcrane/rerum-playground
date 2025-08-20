@@ -1,7 +1,7 @@
 import React from "react";
 import { useRerumObject } from "../../hooks/useRerumObject";
 import { GeneratedBy } from "../GeneratedBy/GeneratedBy";
-import styles from "./Metadata.module.css";
+import styles from "./metadata.module.css";
 import { usePath } from "../../hooks/usePath";
 import classNames from "classnames";
 import moment from "moment";

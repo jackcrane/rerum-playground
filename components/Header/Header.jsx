@@ -9,7 +9,7 @@ export const Header = () => {
   return (
     <header className={styles.header}>
       <img src={logo} alt="logo" className={styles.logo} />
-      <h1>rerum Playground</h1>
+      <h1>rerum Reader</h1>
       <div style={{ flex: 1 }}></div>
     </header>
   );

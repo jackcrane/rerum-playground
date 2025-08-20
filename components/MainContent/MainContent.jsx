@@ -24,8 +24,8 @@ export const MainContent = () => {
         <br />
         <p>
           Example:{" "}
-          <a href="https://rerum-playground.jackcrane.rocks/68a544f51f6e00240eb36b31">
-            https://rerum-playground.jackcrane.rocks/68a544f51f6e00240eb36b31
+          <a href="https://rerum-reader.jackcrane.rocks/68a544f51f6e00240eb36b31">
+            https://rerum-reader.jackcrane.rocks/68a544f51f6e00240eb36b31
           </a>
         </p>
       </Section>
